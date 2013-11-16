@@ -4,8 +4,8 @@ STCSS is a new standard for formatting CSS. It indents your CSS selectors based 
 
 ***
 ## How does it work?
-STCSS is a work in progress. It works using javaScript and jQuery.
-Make sure you HTML document has a body tag and another tag to assign where the CSS code will be rendered.
+STCSS is a work in progress. You'll need jQuery to make this work.
+Make sure your HTML document has a body tag and another tag to assign where the CSS code will be rendered.
 The default tag is 'code'. Include jQuery first and stcss.js at the bottom of the HTML document.
 
 ## HTML Basics
