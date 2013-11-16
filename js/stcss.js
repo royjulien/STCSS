@@ -1,6 +1,6 @@
 /* 
  * Julien Roy
- * 11.13.13
+ * 11.14.13
  * STCSS preliminary code
  */
 
@@ -9,7 +9,8 @@
 //Create multiple options that can be controlled by the user.
 
 
-var tab = '&#09',
+var tag = 'code',
+    tab = '&#09',//This is a TAB, you can change it to spaces if you prefer using &nbsp;
     brackets = {
         o : ' {',
         c : '}'
@@ -35,7 +36,7 @@ var tab = '&#09',
         });
     },
     append = function(content) {
-        return $('code').append(content);
+        return $(tag).append(content);
     };
 
 recursive($('body'));
@@ -80,7 +81,7 @@ css+=ul.o;
                     tagNames.push(tagName);
                     
                     if (tagNames[tagNames.length-1] == tagName) {
-                        
+                        css+=tagName;
                     } else {
                         css+=tagName;
                     }
