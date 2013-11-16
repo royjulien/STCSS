@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font: 13px/21px helvetica, arial, sans-serif;
+}
+ul, li {
+    list-style-type: none;
+}
+pre {
+    padding: 20px;
+    background-color: #222;
+    white-space: pre;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    border: 2px dashed white;
+}
+    code {
+        color: #ff008f;
+    }
+    .selector {
+        color: #ff008f;
+    }
+    .comment {
+        color: #ccc;
+    }
