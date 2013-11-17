@@ -4,10 +4,11 @@
  * STCSS preliminary code
  */
 
-
-//create a new file and insert the css into that file and name the file when the javascript is being ran.
-//Create multiple options that can be controlled by the user.
-
+//TODO
+//split the page half rendered html and rendered css
+//hover the html to add a tag with no attributes
+//create multiple options that can be controlled by the user
+//
 
 var tag = 'code',
     tab = '&#09',//This is a TAB, you can change it to spaces if you prefer using &nbsp;
@@ -72,9 +73,10 @@ css+=ul.o;
                             case 'src':
                                 css+=tagName;
                                 break;
-                            default:
-                                css+='['+attrName+'='+attrValue+']';
-                                break;
+                            //default:
+                                //css+=tagName;
+                                //css+='['+attrName+'='+attrValue+']';
+                                //break;
                         }
                     }
                 } else {
