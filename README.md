@@ -11,7 +11,7 @@ STCSS is still in Alpha.
 - Include these files as well as jQuery in any HTML document you have completed
 - Add
 
-     <pre><code></code></pre>
+     &lbr;pre><code></code></pre>
 
   at the bottom of your document, just before the body tag
 
