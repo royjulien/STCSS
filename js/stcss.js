@@ -4,11 +4,8 @@
  * STCSS preliminary code
  */
 
-//TODO
-//split the page half rendered html and rendered css
-//hover the html to add a tag with no attributes
-//create multiple options that can be controlled by the user
-//Add warnings for duplicate id's
+//finish globals
+//add field, paste html and ajax render the css
 
 var tag = 'code',
     tab = '&#09',//This is a TAB, you can change it to spaces if you prefer using &nbsp;
@@ -28,7 +25,7 @@ var tag = 'code',
     globalCssComment =  '<br/><span class="comment">/******************** <br/> * GLOBALS <br/> ********************/ <br/></span>',
     css = '',
     cssComment ='<br/><span class="comment">/******************** <br/> * MAIN CSS <br/> ********************/ <br/></span>',
-    warning = '',
+    warning = '<br/>',
     maxDepdth = 0,
     allTags = [],
     tagArray = [],
@@ -64,10 +61,10 @@ css+=ul.o;
                     
                     // Duplicate ID's
                     if (ids.indexOf(attrValue) > 0){
-                        warning+='<br/><span class="warning">';
+                        warning+='<span class="warning">';
                         warning+='Duplicate Found: ';
                         warning+='#'+attrValue;
-                        warning+='</span>';
+                        warning+='</span><br/>';
                     } else if (attArray.indexOf(attrValue) < 0) {
                         attArray.push(attrValue);
                         
@@ -103,7 +100,7 @@ css+=ul.o;
                 css+=tagName;
                 css+=brackets.o;
                 css+=brackets.c;
-            } else if (globalTags.indexOf(tagName) > 0) {
+            } else if (globalTags.indexOf(tagName) < 0) {
                 if (tagArray.indexOf(tagName) < 0) {
                     tagArray.push(tagName);
                     globalCss+=li.o;
