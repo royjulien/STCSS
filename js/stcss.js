@@ -1,16 +1,20 @@
 /* 
  * Julien Roy
- * 11.14.13
- * STCSS preliminary code
+ * 11.16.13
+ * STCSS JS
  */
 
-//finish globals
 //add field, paste html and ajax render the css
+var textarea = $('textarea');
+
+textarea.keyup(function(){
+    $('#render').text(textarea.val());
+})
 
 var tag = 'code',
     tab = '&#09',//This is a TAB, you can change it to spaces if you prefer using &nbsp;
     brackets = {
-        o : ' {',
+        o : ' {<br/><br/>',
         c : '}'
     },
     ul = {
@@ -30,7 +34,7 @@ var tag = 'code',
     allTags = [],
     tagArray = [],
     attArray = [],
-    globalTags = ['a','ul','li','div','article','aside','aside','audio'],
+    globalTags = ['a','ul','li','div','article','aside','aside','audio', 'p', 'single'],
     ids = [],
     classes = [],
     recursive = function($node) {
@@ -76,6 +80,7 @@ css+=ul.o;
                                         ids.push(attrValue);
                                         css+='#'+attrValue;
                                         css+=brackets.o;
+                                        for (j=2; j < liDepth; j++) css+=tab;
                                         css+=brackets.c;
                                         break;
                                     case 'class':
@@ -83,6 +88,7 @@ css+=ul.o;
                                         var rpl = attrValue.replace(' ', '.');
                                         css+='.'+rpl;
                                         css+=brackets.o;
+                                        for (j=2; j < liDepth; j++) css+=tab;
                                         css+=brackets.c;
                                         break;
                                 }
@@ -99,8 +105,9 @@ css+=ul.o;
                 for (j=2; j < liDepth; j++) css+=tab;
                 css+=tagName;
                 css+=brackets.o;
+                for (j=2; j < liDepth; j++) css+=tab;
                 css+=brackets.c;
-            } else if (globalTags.indexOf(tagName) < 0) {
+            } else if (globalTags.indexOf(tagName) > 0) {
                 if (tagArray.indexOf(tagName) < 0) {
                     tagArray.push(tagName);
                     globalCss+=li.o;

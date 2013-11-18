@@ -1,3 +1,9 @@
+/* 
+ * Julien Roy
+ * 11.16.13
+ * STCSS CSS
+ */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -6,6 +12,7 @@ html, body {
 ul, li {
     list-style-type: none;
 }
+/* Code  */
 pre {
     padding: 20px;
     background-color: #222;
@@ -18,12 +25,12 @@ pre {
     code {
         color: #ff008f;
     }
-    .selector {
-        color: #ff008f;
-    }
-    .comment {
-        color: #ccc;
-    }
-.warning {
-    color: #f00;
-}
+        .selector {
+            color: #ff008f;
+        }
+        .comment {
+            color: #ccc;
+        }
+        .warning {
+            color: #f00;
+        }
