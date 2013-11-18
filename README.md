@@ -10,7 +10,9 @@ STCSS is still in Alpha.
 - Download js/stcss.min.js and css/stcss.css
 - Include these files as well as jQuery in any HTML document you have completed
 - Add
+
      <pre><code></code></pre>
+
   at the bottom of your document, just before the body tag
 
 Tada, launch the HTML page in any browser and check out your rendered Styled CSS, indented according to your HTML DOM.
