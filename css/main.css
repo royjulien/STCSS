@@ -24,3 +24,6 @@ pre {
     .comment {
         color: #ccc;
     }
+.warning {
+    color: #f00;
+}
