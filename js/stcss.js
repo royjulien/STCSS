@@ -24,10 +24,15 @@ var tag = 'code',
         o : '<li>',
         c : '</li>'
     }
+    globalCss = '',
+    globalCssComment =  '<br/><span class="comment">/******************** <br/> * GLOBALS <br/> ********************/ <br/></span>',
     css = '',
+    cssComment ='<br/><span class="comment">/******************** <br/> * MAIN CSS <br/> ********************/ <br/></span>',
     maxDepdth = 0,
     allTags = [],
-    tagNames = [],
+    tagArray = [],
+    attArray = [],
+    globalTags = ['a','ul','li','div','article','aside','aside','audio'],
     ids = [],
     classes = [],
     recursive = function($node) {
@@ -46,142 +51,69 @@ css+=ul.o;
     for (i=0; i < allTags.length; i++) {
         liDepth = $(allTags[i]).parents().length;
         tagName = allTags[i].tagName.toLowerCase();
-        if (tagName != 'script') {
-            css+=li.o;
-                for (j=2; j < liDepth; j++) css+=tab;
-                /**********************
-                 * ATTRIBUTES
-                 **********************/
-                attr = allTags[i].attributes;
-                if (attr.length) {
-                    for (k=0; k < attr.length; k++) {
-                        attrName = attr[k].nodeName;
-                        attrValue = attr[k].nodeValue;
-                        switch (attrName) {
-                            case 'id':
-                                ids.push(attrValue);
-                                css+='#'+attrValue;
-                                break;
-                            case 'class':
-                                classes.push(attrValue);
-                                var rpl = attrValue.replace(' ', '.');
-                                css+='.'+rpl;
-                                break;
-                            case 'href':
-                                css+=tagName;
-                                break;
-                            case 'src':
-                                css+=tagName;
-                                break;
-                            //default:
-                                //css+=tagName;
-                                //css+='['+attrName+'='+attrValue+']';
-                                //break;
+        
+        if (globalTags.indexOf(tagName) > 0) {
+            if (tagArray.indexOf(tagName) < 0) {
+                tagArray.push(tagName);
+                globalCss+=li.o;
+                    globalCss+=tagName;
+                    globalCss+=brackets.o;
+                    globalCss+=brackets.c;
+                globalCss+=li.c;
+            }
+        } else if (tagName != 'script') {
+            /* Attributes */
+            attr = allTags[i].attributes;
+            if (attr.length) {
+                for (k=0; k < attr.length; k++) {
+                    attrName = attr[k].nodeName;
+                    attrValue = attr[k].nodeValue;
+                    if (attArray.indexOf(attrValue) < 0) {
+                        attArray.push(attrValue);
+                        
+                        if (attrName == 'id' || attrName == 'class') {
+                            css+=li.o;
+                                for (j=2; j < liDepth; j++) css+=tab;
+                                switch (attrName) {
+                                    case 'id':
+                                        ids.push(attrValue);
+                                        css+='#'+attrValue;
+                                        css+=brackets.o;
+                                        css+=brackets.c;
+                                        break;
+                                    case 'class':
+                                        classes.push(attrValue);
+                                        var rpl = attrValue.replace(' ', '.');
+                                        css+='.'+rpl;
+                                        css+=brackets.o;
+                                        css+=brackets.c;
+                                        break;
+                                }
+                            css+=li.c;
                         }
                     }
-                } else {
-                    tagNames.push(tagName);
-                    
-                    if (tagNames[tagNames.length-1] == tagName) {
-                        css+=tagName;
-                    } else {
-                        css+=tagName;
-                    }
                 }
+            } else if (tagName == 'header' || tagName == 'nav') {
+                for (j=2; j < liDepth; j++) css+=tab;
+                /* Adding comments */
+                css+= '<span class="comment">';
+                css+= '/******************** <br/>';
+                for (j=2; j < liDepth; j++) css+=tab;
+                css+= ' * '+tagName.toUpperCase()+' <br/>';
+                for (j=2; j < liDepth; j++) css+=tab;
+                css+= ' ********************/ <br/>';
+                css+= '</span>';
+                for (j=2; j < liDepth; j++) css+=tab;
+                css+=tagName;
                 css+=brackets.o;
-                //for (j=2; j < liDepth; j++) css+=tab;
                 css+=brackets.c;
-            css+=li.c;
+            }
         }
     }
 css+=ul.c;
 
+if (globalCss.length) globalCss = globalCssComment + globalCss;
+append(globalCss);
+
+if (css.length) css = cssComment + css;
 append(css);
-
-
-/*
-for (var i=0; i < allTags.length; i++) {
-    css+='<li>';
-        currentTag = allTags[i];
-        if (allTags[i-1]) {
-            
-            //console.log('Current: '+currentTag.tagName);
-            //console.log(' | Parent:'+currentTag.parentNode.tagName);
-            //console.log('   | Previous: '+allTags[i-1].tagName);
-            
-            if (currentTag.parentNode.tagName == allTags[i-1].tagName || 
-                currentTag.previousElementSibling.tagName == allTags[i-1].tagName) {
-                css+='<ul>';
-                    css+='<li>';
-                        css+=currentTag.tagName.toLowerCase() + brackets;
-                    css+='</li>';
-                css+='</ul>';
-            } else {
-                css+=currentTag.tagName.toLowerCase() + brackets;
-            }
-            
-        } else {
-            css+=currentTag.tagName.toLowerCase() + brackets;
-        }
-        console.log(allTags);
-    /*
-        if (allTags[i].children.length) {
-            css+='<ul>';
-            var children = allTags[i].children;
-            for (var h=0; h < children.length; h++) {
-                css+='<li>';
-                css+=children[h].tagName.toLowerCase();
-                css+='</li>';
-            }
-            css+='</ul>';
-        }
-    /*
-        if (allTags[i].childElementCount) {
-            css+=(allTags[i].tagName.toLowerCase());
-            
-            css+='<ul>';
-                for(var j=0; j < allTags[i].childElementCount; j++) {
-                    css+='<li>'+(allTags[i+1+j].tagName.toLowerCase())+'</li>';
-                }
-            css+='</ul>';
-            
-        } else {
-            css+=(allTags[i].tagName.toLowerCase());
-        }
-
-    css+='</li>';
-}
-css+='</ul>';
-
-
-append(css);
-
-/*
-for (i; i < tags.length; i++) {
-    var tagNames = tags[i].tagName.toLowerCase(),
-        numTagAttributes = tags[i].attributes.length;
-    
-    css += '<br/><span class=\'selector\'>' + tagNames;
-    
-    if (numTagAttributes > 0) {
-        css += '<span class=\'selector\'>';
-        for (var x = 0; x < numTagAttributes; x++) {
-            if (tags[i].attributes[x].nodeName == selectorCharacter[0][0])
-                css += selectorCharacter[0][1];
-            if (tags[i].attributes[x].nodeName == selectorCharacter[1][0])
-                css += selectorCharacter[1][1];
-                css += tags[i].attributes[x].nodeValue;
-        }
-        css += '</span>';
-    }
-    css += ' {';
-    css += '<br/>';
-    css += '<span class=\'comment\'>';
-    css += '    ';
-    css += 'property:value';
-    css += '</span>';
-    css += '<br/>';
-    css += '}';
-    css += '</span>';
-}*/
-
