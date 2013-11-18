@@ -1,16 +1,4 @@
-/* 
- * Julien Roy
- * 11.16.13
- * STCSS JS
- */
-
-//add field, paste html and ajax render the css
-var textarea = $('textarea');
-
-textarea.keyup(function(){
-    $('#render').text(textarea.val());
-})
-
+/*! STCSS v0.16 Alpha | Julien Roy - royjulien.com | 11.16.13 */
 var tag = 'code',
     tab = '&#09',//This is a TAB, you can change it to spaces if you prefer using &nbsp;
     brackets = {
