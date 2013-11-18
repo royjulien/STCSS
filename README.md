@@ -7,11 +7,12 @@ STCSS is a new standard for formatting CSS. It indents your CSS selectors based 
 ***
 ## How does it work?
 STCSS is still in Alpha.
-- Download js/stcss.min.js and css/stcss.css
-- Include these files as well as jQuery in any HTML document you have completed
-- Add pre & code tags at the bottom of your document, just before the body tag
+- Download the project
+- Copy any inner body HTML you've created
+- Paste your HTML code in the index.html template
+- Launch index.html in any browser
 
-Tada, launch the HTML page in any browser and check out your rendered Styled CSS, indented according to your HTML DOM.
+Tada, Check out your rendered Styled CSS, indented according to your HTML DOM.
 
 ## HTML Basics
 When writing your HTML, keep efficiency in mind. ID's are the most efficient, universal are the least.
