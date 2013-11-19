@@ -22,7 +22,7 @@ var tag = 'code',
     allTags = [],
     tagArray = [],
     attArray = [],
-    globalTags = ['a','ul','li','div','article','aside','aside','audio', 'p', 'single'],
+    globalTags = ['a','ul','li','div','article','i','aside','audio', 'p', 'single'],
     ids = [],
     classes = [],
     recursive = function($node) {
@@ -111,7 +111,7 @@ globalCss+=ul.c;
 css+=ul.c;
 
 if (warning.length) append(warning);
-
+console.log(globalCss);
 if (globalCss.length) globalCss = globalCssComment + globalCss;
 append(globalCss);
 
