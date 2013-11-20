@@ -42,10 +42,10 @@ Example:
             #header-slogan {}
 
 ## CSS Declaration
-[Google's declaration order](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#Declaration_Order) is set as Alphabetize however I has a different approach to offer.
+[Google's declaration order](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#Declaration_Order) is set as Alphabetize however I have a different approach to offer.
 
 While an alphabetical approach is consistent it lacks the design and behavior aspect of a developer.
-This approach is consistent and makes sense to a developer the elements priorities.
+The following approach is consistent as well as logical for developers. All properties are split into sections that correlate with the priorities of coding.`
 
     #wrapper {
         /*Visibility*/
