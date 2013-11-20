@@ -3,6 +3,7 @@
 Welcome to the STCSS - Style The Cascading Style Sheets!
 
 STCSS is a new standard for formatting CSS. It indents your CSS selectors based on your DOM making it easy for developers to read and know how each CSS declaration is nested.
+It also offers a new way to call your CSS declarations in a matter that is logical for developers.
 
 ***
 ## How does it work?
