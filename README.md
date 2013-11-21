@@ -41,11 +41,11 @@ Would be written:
             #header-slogan {}
 
     
-## CSS Declaration
+## LogiCSS - Logical CSS Declarations
 [Google's declaration order](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#Declaration_Order) is set as Alphabetize however I have a different approach to offer.
 
 While an alphabetical approach is consistent it lacks the design and behavior aspect of a developer.
-The following approach is consistent as well as logical for developers. All properties are split into sections that correlate with the priorities of coding.`
+The following approach is consistent as well as logical for developers. All properties are split into sections that correlate with the priorities of coding.
 
     #wrapper {
         /*Visibility*/
