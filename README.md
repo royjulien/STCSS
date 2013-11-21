@@ -1,9 +1,10 @@
-#STCSS
+#STCSS & LogiCSS
 
-Welcome to the STCSS - Style The Cascading Style Sheets!
+Welcome to STCSS - Style The Cascading Style Sheets!
 
-STCSS is a new standard for formatting CSS. It indents your CSS selectors based on your DOM making it easy for developers to read and know how each CSS declaration is nested.
-It also offers a new way to call your CSS declarations in a matter that is logical for developers.
+STCSS is a new standard for formatting CSS. It indents your CSS selectors based on your DOM making it easy for developers to read and know how each CSS selector is nested.
+
+LogiCSS is a new standard for formatting your CSS declarations within a selector. It offers logical consistency for developers based on priorities. LogiCSS is currently being developed.
 
 ***
 ## How does it work?
