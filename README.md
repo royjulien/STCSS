@@ -21,7 +21,18 @@ STCSS develops all your core CSS for you.
 ## STCSS Formatting
 You can develop your own CSS based on STCSS formatting by using the same indentation that your HTML document has.
 
-Example:
+HTML example:
+
+    <section id='wrapper'>
+        <header id='header'>
+            <h1 id='header-h1'>
+                <a class='link' href='#'>Style the Styles</a>
+            </h1>
+            <div id='header-slogan'></div>
+        </header>
+    </section>
+    
+Would be written:
 
     #wrapper {}
         #header {}
@@ -29,6 +40,7 @@ Example:
                 .link {}
             #header-slogan {}
 
+    
 ## CSS Declaration
 [Google's declaration order](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#Declaration_Order) is set as Alphabetize however I have a different approach to offer.
 
