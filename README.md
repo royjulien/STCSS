@@ -15,19 +15,6 @@ STCSS is still in Alpha.
 
 Tada, Check out your rendered Styled CSS, indented according to your HTML DOM.
 
-## HTML Basics
-When writing your HTML, keep efficiency in mind. ID's are the most efficient, universal are the least.
-Use dash as the depth increases.
-
-    <section id='wrapper'>
-        <header id='header'>
-            <h1 id='header-h1'>
-                <a class='link' href='#'>Style the Styles</a>
-            </h1>
-            <div id='header-slogan'></div>
-        </header>
-    </section>
-
 ## CSS Creation
 STCSS develops all your core CSS for you.
 
