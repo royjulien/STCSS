@@ -136,3 +136,6 @@ $('#html-box').bind('input', function() {
     
     stcss();
 });
+
+// Run once for the sample
+stcss();
