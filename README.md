@@ -8,16 +8,12 @@ LogiCSS is a new standard for formatting your CSS declarations within a selector
 
 ***
 ## How does it work?
-STCSS is still in Alpha.
+STCSS is now in Beta. [Live Demo](http://royjulien.com/stcss)
 - Download the project
-- Copy any inner body HTML you've created
-- Paste your HTML code in the index.html template
 - Launch index.html in any browser
+- Either paste your HTML in the HTML box or start typing
 
-Tada, Check out your rendered Styled CSS, indented according to your HTML DOM.
-
-## CSS Creation
-STCSS develops all your core CSS for you.
+Tada, your CSS is created live and indented according to your DOM.
 
 ## STCSS Formatting
 You can develop your own CSS based on STCSS formatting by using the same indentation that your HTML document has.
