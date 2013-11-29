@@ -146,9 +146,12 @@ ul, li {
 			overflow-y: scroll;
 			border: 0;
 			resize: none;
-			color: white;
+			color: #38AFE7;
 			background-color: #2E2A26;
 			font-family: monospace;
+			font-size:13px;
+			-webkit-font-smoothing: antialiased;
+			text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 			-webkit-transition: all 333ms;
 			-moz-transition: all 333ms;
 			-o-transition: all 333ms;
