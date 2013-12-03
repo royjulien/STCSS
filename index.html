@@ -1,26 +1,27 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <title>STCSS - Style the cascading style sheets</title>
-    <link rel='stylesheet' href='css/stcss.min.css' />
-	<link rel='apple-touch-icon-precomposed' sizes='64x64' href='stcss-icon-apple.png'>
-	<link rel='shortcut icon' href='favicon.ico'>
-    <script src='js/vendor/modernizr.min.js'></script>
+<meta charset='utf-8'>
+<title>STCSS - Style the cascading style sheets</title>
+<link rel='stylesheet' href='css/stcss.min.css' />
+<link rel='stylesheet' href='css/codemirror.css' />
+<link rel='apple-touch-icon-precomposed' sizes='64x64' href='stcss-icon-apple.png'>
+<link rel='shortcut icon' href='favicon.ico'>
+<script src='js/vendor/modernizr.min.js'></script>
 </head>
 <body>
-    <div id='wrapper'>
-        <header>
-            <h1>STCSS <span>v1.22 Beta</span></h1>
-            <p>Creates your CSS instantly and indents it according to your DOM.</p>
-        </header>
-        <nav>
-            <button onclick="window.location.href='https://github.com/royjulien/STCSS'">Download on Github</button>
-            <a href="https://github.com/royjulien/STCSS"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-        </nav>
-        <section id='html'>
-            <h2>HTML - Insert/Type</h2>
-            <textarea id='html-box'>
+<div id='wrapper'>
+<header>
+	<h1>STCSS <span>v1.3 Beta</span></h1>
+	<p>Creates your CSS instantly and indents it according to your DOM.</p>
+</header>
+<nav> <a href="https://github.com/royjulien/STCSS"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a> </nav>
+<section id='html'>
+	<h2>HTML - Insert/Type</h2>
+	<textarea id='html-box'>
+
+
+<!-- Paste your Inner body HTML or start typing -->
 <div id='wrapper'>
     <header>
         <nav id='main-nav'>
@@ -33,31 +34,38 @@
     </header>
 </div>
 </textarea>
-        </section>
-        <section id='css'>
-            <h2>CSS - Renders Instantly</h2>
-            <pre><code></code></pre>
-        </section>
-        <footer>
-            Created by Roy Julien 2013
-        </footer>
-    </div>
-    
-    <section id='generate'>
-        <div id='wrapper'>
-            <header>
-                <nav id='main-nav'>
-                    <ul>
-                        <li class='active'>Home</li>
-                        <li class='passive'>About</li>
-                        <li class='passive'>Contact</li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-    </section>
-<!-- JS -->
-<script src='js/vendor/jquery.min.js'></script>
-<script src='js/stcss.js'></script>
+</section>
+<section id='css'>
+	<h2>CSS - Renders Instantly</h2>
+	<pre><code></code></pre>
+</section>
+<footer>STCSS v1.3 Beta | Julien Roy | 12.03.13</footer>
+</div>
+<section id='generate'>
+	<div id='wrapper'>
+		<header>
+			<nav id='main-nav'>
+				<ul>
+					<li class='active'>Home</li>
+					<li class='passive'>About</li>
+					<li class='passive'>Contact</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+</section>
+<!-- JS --> 
+<script src='js/vendor/jquery.min.js'></script> 
+<script src='js/vendor/codemirror.min.js'></script> 
+<script src='js/stcss.min.js'></script> 
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-46141367-1', 'royjulien.com');
+	ga('send', 'pageview');
+</script>
 </body>
 </html>

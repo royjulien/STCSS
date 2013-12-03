@@ -1,4 +1,4 @@
-/*! STCSS v1.22 Beta | Julien Roy - royjulien.com | 11.25.13 */
+/*! STCSS v1.3 Beta | Julien Roy - royjulien.com | 12.03.13 */
 @font-face {
 	font-family: 'Ubuntu';
 	font-style: normal;
@@ -35,43 +35,46 @@ ul, li {
 	bottom: 0
 }
 	header {
-		position: absolute;
-		bottom: 0;
+		position: fixed;
+		top: 0;
+		height: 66px;
 		width: 100%;
 		background-color: #222;
-		border-top: 1px dashed gray;
-		text-align: center;
 		z-index: 1;
-		box-shadow: inset 0 -10px 0 #292929, inset 0 -11px 0 #727272
+		box-shadow: inset 0 -1px 0 #727272, inset 0 -5px 0 #292929;
+		overflow: hidden;
 	}
 		header h1 {
 			position: relative;
-			top: 15px;
-			height: 70px;
-			margin: 0 auto;
-			text-align: center;
-			font-weight: 700;
-			font-size: 60px;
+			height: 60px;
+			font-size: 34px;
 			color: #fff;
 			text-shadow: 0 1px 1px #561c4d, 2px 2px 0 #632153, 3px 3px 0 #f0c, 0 0 15px #9c9c9c;
-			line-height: 65px
+			line-height: 65px;
+			display: inline-block;
+			left: 15px;
+			width: 240px;
+			margin: 0;
 		}
 			header h1 span {
-				font-size: 20px
+				font-size: 21px;
+				font-weight: 300;
 			}
 		header p {
 			color: white;
-			font-size: 28px;
-			font-weight: 300
+			font-size: 14px;
+			font-weight: 300;
+			display: inline-block;
+			position: relative;
 		}
 	nav {
 		width: 100%;
 		text-align: center;
-		margin: 65px auto;
+		/* margin: 0 auto; */
 	}
 		button {
 			position: absolute;
-			bottom: 76px;
+			top: 10px;
 			padding: 10px 20px;
 			border-radius: 2px;
 			border: 0;
@@ -80,12 +83,11 @@ ul, li {
 			cursor: pointer;
 			font-size: 15px;
 			box-shadow: 0 3px 0 0 #666;
-			margin-left: 204px;
 			z-index: 1;
 		}button:hover {
 			background: #dbdbdb
 		}button:focus {
-			top: 2px;
+			top: 12px;
 			outline: 0;
 			box-shadow: none
 		}
@@ -103,32 +105,35 @@ ul, li {
 			opacity: .9
 		}
 	#html, #css {
-		position: absolute;
-		width: 51%;
+		position: fixed;
+		width: 50%;
 		height: 100%;
 		bottom: 0;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		margin-top: 100px
-	}
+		top: 66px;}
 	#css {
 		right: 0;
 		border-left: 1px dashed gray
 	}
 		#html h2, #css h2 {
 			position: absolute;
-			top: -12px;
-			right: 20px;
+			top: -13px;
+			right: -1px;
 			color: #D1D1D1;
 			width: 180px;
 			text-align: center;
 			font-weight: 300;
-			background: #555;
+			background: #292929;
 			height: 23px;
 			line-height: 24px;
 			font-size: 14px;
 			border-bottom-left-radius: 5px;
+			border-left: 1px solid #808080;
+			margin-left: -1px;
+			border-right: 1px solid #808080;
+			z-index: 1;
 		}
 		#css h2 {
 			left: 0px;
@@ -145,9 +150,8 @@ ul, li {
 			box-sizing: border-box;
 			overflow-y: scroll;
 			border: 0;
-			resize: none;
-			color: #38AFE7;
-			background-color: #2E2A26;
+			color: #F92672	;
+			background-color: #272822;
 			font-family: monospace;
 			font-size:13px;
 			-webkit-font-smoothing: antialiased;
@@ -157,15 +161,9 @@ ul, li {
 			-o-transition: all 333ms;
 			-ms-transition: all 333ms;
 			transition: all 333ms
-		}#html-box:hover, #html-box:focus, #html-box:active, pre:hover {
-			background-color: #333;
-			outline: 0
 		}
-			code {
-				color: #ff008f
-			}
 				.selector {
-					color: #ff008f
+					color: #F92672
 				}
 				.comment {
 					color: #ccc
@@ -177,20 +175,19 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 28px;
-	background-color: rgba(255,255,255,0.05);
+	height: 14px;
 	color: white;
-	font-size: 11px;
+	font-size: 9px;
 	font-weight: 300;
 	text-align: center;
-	line-height: 28px
+	line-height: 17px;
+	z-index: 10;
+	background: rgba(31, 31, 31, 1);
 }
 #generate {
 	display: none
 }
 
 @media all and (max-width:1280px) {
-	#html h2 {
-		right: 10px
-	}
+
 }
