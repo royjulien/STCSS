@@ -28,6 +28,7 @@ ul, li {
 	list-style-type: none
 }
 #wrapper {
+	display: none;
 	position: absolute;
 	overflow: hidden;
 	width: 100%;
@@ -188,6 +189,28 @@ footer {
 	display: none
 }
 
-@media all and (max-width:1280px) {
+/* Pace */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #ff35ba;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 5px;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
 }
