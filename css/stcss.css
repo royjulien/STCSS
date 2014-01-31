@@ -123,23 +123,19 @@ ul, li {
 			top: -13px;
 			right: -1px;
 			color: #D1D1D1;
-			width: 180px;
+			width: 100%;
 			text-align: center;
 			font-weight: 300;
-			background: #292929;
+			background: #666;
+			background: rgba(255,255,255,.2);
 			height: 23px;
 			line-height: 24px;
 			font-size: 14px;
-			border-bottom-left-radius: 5px;
-			border-left: 1px solid #808080;
 			margin-left: -1px;
-			border-right: 1px solid #808080;
 			z-index: 1;
 		}
 		#css h2 {
 			left: 0px;
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 5px;
 		}
 		#html-box, pre {
 			width: 100%;
