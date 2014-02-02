@@ -14,7 +14,7 @@ STCSS is now in Beta. [Live Demo](http://royjulien.com/stcss)
 Tada, your CSS is created live and indented according to your DOM.
 
 ## STCSS Formatting
-You can develop your own CSS based on STCSS formatting by using the same indentation that your HTML document has.
+You can develop your own CSS based on STCSS formatting by using the same indentation as your HTML.
 
 HTML example:
 
