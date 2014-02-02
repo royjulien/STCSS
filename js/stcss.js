@@ -10,8 +10,10 @@ var checkPaceStatus = function() {
 		
 		var htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-box"), {
 			theme: 'monokai',
-			//mode: 'htmlmixed',
+			mode: 'xml',
+			htmlMode: true,
 			lineNumbers: true,
+			lineWrapping: true,
 			matchBrackets: true
 		}),
 		i = 0,
@@ -150,5 +152,4 @@ var checkPaceStatus = function() {
 		
 		stcss();
 	}
-},
-intrvl = setInterval(checkPaceStatus, 100);
+},intrvl = setInterval(checkPaceStatus, 100);
