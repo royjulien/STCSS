@@ -32,5 +32,5 @@ Would be written:
     #wrapper {}
         #header {}
             #header-h1 {}
-                .link {}
+                .link {}.link:hover {}.link:before {}
             #header-slogan {}
